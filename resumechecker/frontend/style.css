@@ -1,0 +1,96 @@
+:root {
+  --primary-color: #6200ea;
+  --secondary-color: #03dac6;
+  --error-color: #ff3860;
+  --disabled-color: #b5b5b5;
+  --bg-gradient: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  --text-color: #333;
+  --white: #ffffff;
+}
+
+body {
+  background: var(--bg-gradient);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  transition: background 1s ease;
+}
+
+.upload-container {
+  animation: fadeInUp 0.8s ease;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.upload-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.file-label {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.file-cta.custom-cta {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-cta.custom-cta:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.file-input {
+  display: none;
+}
+
+.file-name {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.button[disabled] {
+  background-color: var(--disabled-color);
+  cursor: not-
+}

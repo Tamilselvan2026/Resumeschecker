@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Resume Checker</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Resume Checker</h1>
+
+      <div class="upload-container box">
+        <form id="uploadForm">
+          <div class="file has-name is-boxed is-fullwidth">
+            <label class="file-label">
+              <input
+                class="file-input"
+                type="file"
+                name="file"
+                id="fileInput"
+                accept="application/pdf"
+                required
+              />
+              <span class="file-cta custom-cta">
+                <span class="file-icon">📄</span>
+                <span class="file-label-text">Choose PDF Resume</span>
+              </span>
+              <span class="file-name" id="fileName">No file uploaded</span>
+            </label>
+          </div>
+          <p class="upload-note mt-2">📌 PDF only. Max size: 2MB.</p>
+
+          <button type="submit" class="button is-primary is-fullwidth mt-4" id="uploadBtn">
+            Upload & Analyze
+          </button>
+        </form>
+      </div>
+
+      <div id="result" class="box" style="display:none;">
+        <h2 class="subtitle">Analysis Result</h2>
+        <p><strong>Score:</strong> <span id="score"></span>%</p>
+        <p><strong>Matched Keywords:</strong> <span id="found"></span></p>
+        <p><strong>Missing Keywords:</strong> <span id="missing"></span></p>
+        <p><strong>AI Feedback:</strong> <span id="feedback"></span></p>
+        <p><strong>Prediction Confidence:</strong> <span id="confidence"></span>%</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
